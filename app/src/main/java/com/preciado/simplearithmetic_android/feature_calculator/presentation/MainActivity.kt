@@ -1,4 +1,4 @@
-package com.preciado.simplearithmetic_android
+package com.preciado.simplearithmetic_android.feature_calculator.presentation
 
 import android.os.Bundle
 import androidx.activity.ComponentActivity
@@ -15,9 +15,15 @@ import androidx.navigation.NavGraph
 import androidx.navigation.compose.NavHost
 import androidx.navigation.compose.composable
 import androidx.navigation.compose.rememberNavController
+import com.preciado.simplearithmetic_android.feature_calculator.presentation.calculator.CalculatorScreen
 import com.preciado.simplearithmetic_android.ui.theme.SimpleArithmetic_AndroidTheme
+import dagger.hilt.android.AndroidEntryPoint
+import javax.inject.Inject
 
-class MainActivity : ComponentActivity() {
+@AndroidEntryPoint
+class MainActivity : ComponentActivity(
+
+) {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContent {
@@ -28,9 +34,9 @@ class MainActivity : ComponentActivity() {
                     color = MaterialTheme.colors.background
                 ) {
                     val navController = rememberNavController()
-                    NavHost(navController = navController, startDestination = "home"){
-                        composable("home"){
-                            HomeScreen(navController = navController)
+                    NavHost(navController = navController, startDestination = "calculator"){
+                        composable("calculator"){
+                            CalculatorScreen(navController = navController)
                         }
                     }
                 }
