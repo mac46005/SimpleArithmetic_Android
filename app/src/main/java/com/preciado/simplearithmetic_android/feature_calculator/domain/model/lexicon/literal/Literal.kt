@@ -4,7 +4,7 @@ import com.preciado.simplearithmetic_android.feature_calculator.domain.model.lex
 
 class Literal (
     string: String,
-    function: (Object) -> Object?
+    function: (Object?) -> Object? = {obj -> null}
         ) : Lexicon(
     string,
     function

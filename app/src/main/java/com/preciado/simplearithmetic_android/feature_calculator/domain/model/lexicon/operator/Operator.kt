@@ -5,7 +5,7 @@ import com.preciado.simplearithmetic_android.feature_calculator.domain.use_case.
 
 open class Operator(
     string: String,
-    function: (Object) -> Object?,
+    function: (Object?) -> Object?,
     var operatorType: OperatorType
 ) : Lexicon(
     string,

@@ -5,8 +5,8 @@ import com.preciado.simplearithmetic_android.feature_calculator.domain.model.lex
 
 class Token(
     var index: Int,
-    var token: Char,
-    var lexicon: Lexicon = Unknown("?", )
+    var symbols: String,
+    var lexicon: Lexicon = Unknown("?")
 ) {
 
 }

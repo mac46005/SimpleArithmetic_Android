@@ -2,9 +2,9 @@ package com.preciado.simplearithmetic_android.feature_calculator.domain.model.le
 
 open abstract class Lexicon(
     var string: String,
-    var function: (Object) -> Object?
+    var function: (Object?) -> Object? = {obj -> null}
 ){
-    open fun executeFunction(obj: Object): Object?{
+    open fun executeFunction(obj: Object? = null): Object?{
         return function(obj)
     }
 }
